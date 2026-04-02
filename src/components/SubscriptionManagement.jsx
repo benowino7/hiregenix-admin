@@ -89,13 +89,13 @@ function PackageManagement() {
   const recruiterPlans = plans.filter(p => p.userType === "RECRUITER" && p.name.startsWith("Diamond"));
 
   const tierColors = {
-    Silver: { bg: "from-gray-50 to-slate-100 dark:from-gray-800/60 dark:to-slate-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
-    Gold: { bg: "from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
-    Platinum: { bg: "from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
-    Diamond: { bg: "from-gray-50 to-slate-100 dark:from-gray-800/60 dark:to-slate-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
-    "Diamond Compact": { bg: "from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
-    "Diamond Compact Plus": { bg: "from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
-    "Diamond Unlimited": { bg: "from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20", border: "border-cyan-200 dark:border-cyan-800/40", badge: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400", accent: "text-cyan-600 dark:text-cyan-400" },
+    Silver: { bg: "bg-gray-50 dark:bg-gray-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
+    Gold: { bg: "bg-amber-50 dark:bg-amber-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
+    Platinum: { bg: "bg-violet-50 dark:bg-violet-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
+    Diamond: { bg: "bg-gray-50 dark:bg-gray-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
+    "Diamond Compact": { bg: "bg-amber-50 dark:bg-amber-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
+    "Diamond Compact Plus": { bg: "bg-violet-50 dark:bg-violet-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
+    "Diamond Unlimited": { bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "border-cyan-200 dark:border-cyan-800/40", badge: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400", accent: "text-cyan-600 dark:text-cyan-400" },
   };
   const defaultColor = tierColors.Silver;
 
@@ -111,7 +111,7 @@ function PackageManagement() {
     const colors = tierColors[plan.name] || defaultColor;
 
     return (
-      <div key={plan.id} className={`relative bg-gradient-to-br ${colors.bg} rounded-xl border ${colors.border} p-5 transition-all hover:shadow-md`}>
+      <div key={plan.id} className={`relative ${colors.bg} rounded-xl border ${colors.border} p-5 transition-all hover:shadow-md`}>
         {isEditing ? (
           <div className="space-y-3">
             <div>
@@ -423,7 +423,7 @@ function UserPlanManagement() {
                       : 'hover:bg-gray-50 dark:hover:bg-gray-800/50 border-l-2 border-l-transparent'
                   }`}
                 >
-                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white text-xs font-bold">
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold">
                     {user.firstName?.[0] || '?'}{user.lastName?.[0] || ''}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -502,7 +502,7 @@ function UserPlanManagement() {
           <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-5 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-11 h-11 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-sm">
                   {selectedUser.name?.split(' ').map(n => n[0]).join('') || '?'}
                 </div>
                 <div>

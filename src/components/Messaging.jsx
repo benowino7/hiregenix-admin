@@ -359,7 +359,7 @@ export default function Messaging() {
                     onClick={() => openNewChat(user)}
                     className="w-full flex items-center gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left border-b border-gray-100 dark:border-gray-800"
                   >
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-amber-500 flex items-center justify-center text-white font-semibold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm">
                       {user.firstName?.[0]}{user.lastName?.[0]}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -397,7 +397,7 @@ export default function Messaging() {
                   className={`w-full flex items-center gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left border-b border-gray-100 dark:border-gray-800 ${activeConversation?.id === conv.id ? "bg-teal-50 dark:bg-teal-900/10 border-l-4 border-l-teal-500" : ""}`}
                 >
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-amber-500 flex items-center justify-center text-white font-semibold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm">
                       {conv.otherUser?.firstName?.[0]}{conv.otherUser?.lastName?.[0]}
                     </div>
                     {conv.unreadCount > 0 && (
@@ -430,7 +430,7 @@ export default function Messaging() {
               <button onClick={() => { setMobileShowChat(false); setActiveConversation(null); setPendingRecipient(null); }} className="md:hidden p-1 text-gray-500 hover:text-gray-700">
                 <ArrowLeft className="w-5 h-5" />
               </button>
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-amber-500 flex items-center justify-center text-white font-semibold text-sm">
+              <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm">
                 {chatUser?.firstName?.[0]}{chatUser?.lastName?.[0]}
               </div>
               <div>
@@ -446,7 +446,7 @@ export default function Messaging() {
             <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50 dark:bg-gray-950">
               {messages.length === 0 && pendingRecipient && (
                 <div className="flex flex-col items-center justify-center h-full text-gray-400 text-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400 to-amber-500 flex items-center justify-center text-white text-2xl font-bold mb-4">
+                  <div className="w-16 h-16 rounded-full bg-teal-600 flex items-center justify-center text-white text-2xl font-bold mb-4">
                     {chatUser?.firstName?.[0]}{chatUser?.lastName?.[0]}
                   </div>
                   <p className="text-base font-medium text-gray-600 dark:text-gray-300">{chatUser?.firstName} {chatUser?.lastName}</p>

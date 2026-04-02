@@ -89,17 +89,17 @@ function PaymentStatsBanner() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-4 border border-green-100 dark:border-green-800/40">
+        <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 border border-green-100 dark:border-green-800/40">
           <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Total Revenue</p>
           <p className="text-2xl font-bold text-green-700 dark:text-green-400">
             ${(current.amount / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-4 border border-blue-100 dark:border-blue-800/40">
+        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 border border-blue-100 dark:border-blue-800/40">
           <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Successful Payments</p>
           <p className="text-2xl font-bold text-blue-700 dark:text-blue-400">{current.count.toLocaleString()}</p>
         </div>
-        <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 rounded-xl p-4 border border-purple-100 dark:border-purple-800/40">
+        <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-4 border border-purple-100 dark:border-purple-800/40">
           <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Avg per Transaction</p>
           <p className="text-2xl font-bold text-purple-700 dark:text-purple-400">
             ${current.count > 0 ? ((current.amount / current.count) / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "0.00"}
@@ -612,7 +612,7 @@ function GenerateLinkTab() {
         <button
           onClick={handleGenerate}
           disabled={generating || !selectedUser || !amount}
-          className="w-full py-3 px-4 rounded-xl font-bold text-white bg-gradient-to-r from-teal-500 to-amber-500 hover:from-teal-600 hover:to-amber-600 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full py-3 px-4 rounded-xl font-bold text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {generating ? (
             "Generating..."

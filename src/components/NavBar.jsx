@@ -102,7 +102,7 @@ const NavBar = ({ toggleSidebar }) => {
                 onClick={() => setShowUserMenu(!showUserMenu)}
                 className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-1 pr-1 sm:pr-3 transition-colors"
               >
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                   {initials}
                 </div>
                 <span className="hidden sm:block font-medium text-sm text-gray-700 dark:text-gray-200 max-w-[100px] truncate">
@@ -116,7 +116,7 @@ const NavBar = ({ toggleSidebar }) => {
                   {/* User info header */}
                   <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                         {initials}
                       </div>
                       <div className="min-w-0 flex-1">

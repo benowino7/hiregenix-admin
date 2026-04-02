@@ -561,7 +561,7 @@ function Industries() {
               {/* Industry Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="bg-gradient-to-br from-theme_color to-teal-600 p-3 rounded-lg">
+                  <div className="bg-teal-600 p-3 rounded-lg">
                     <Briefcase className="text-white" size={20} />
                   </div>
                   <div>

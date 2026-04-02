@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../BaseUrl';
 import successMessage from '../utilities/successMessage';
 import ErrorMessage from '../utilities/ErrorMessage';
+import officeImg from '../assets/office.jpg';
 
 const Login = () => {
   const navigation = useNavigate('');
@@ -235,15 +236,15 @@ const Login = () => {
         </div>
 
         {/* RIGHT: Motivational Visual + Text */}
-        <div className="hidden md:block relative bg-gradient-to-br from-teal-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 overflow-hidden">
+        <div className="hidden md:block relative bg-[#FAFBFC] dark:bg-gray-900 overflow-hidden">
           {/* Background image with overlay */}
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&auto=format&fit=crop&q=80"
+              src={officeImg}
               alt="Motivated professional in modern office"
               className="w-full h-full object-cover opacity-30 dark:opacity-20"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-gray-950 dark:via-gray-950/80" />
+            <div className="absolute inset-0 bg-white/80 dark:bg-gray-950/80" />
           </div>
 
           {/* Content overlay */}

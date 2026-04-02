@@ -72,11 +72,11 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#FAFBFC] dark:bg-gray-950 px-4">
       <div className="w-full max-w-md">
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 p-8">
           <div className="text-center mb-6">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-teal-600 flex items-center justify-center shadow-lg">
               <KeyRound className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -120,7 +120,7 @@ export default function ForgotPassword() {
               <button
                 type="submit"
                 disabled={loading || !email}
-                className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-teal-500 to-amber-500 hover:from-teal-600 hover:to-amber-600 transition-all shadow-md disabled:opacity-50"
+                className="w-full py-3 rounded-xl font-bold text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md disabled:opacity-50"
               >
                 {loading ? "Checking..." : "Continue"}
               </button>
@@ -187,7 +187,7 @@ export default function ForgotPassword() {
               <button
                 type="submit"
                 disabled={loading || code.length !== 6 || !newPassword}
-                className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-teal-500 to-amber-500 hover:from-teal-600 hover:to-amber-600 transition-all shadow-md disabled:opacity-50"
+                className="w-full py-3 rounded-xl font-bold text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md disabled:opacity-50"
               >
                 {loading ? "Resetting..." : "Reset Password"}
               </button>
@@ -197,7 +197,7 @@ export default function ForgotPassword() {
           {step === "done" && (
             <Link
               to="/"
-              className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-teal-500 to-amber-500 hover:from-teal-600 hover:to-amber-600 transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl font-bold text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md flex items-center justify-center gap-2"
             >
               Go to Login
             </Link>

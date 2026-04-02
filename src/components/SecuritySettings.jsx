@@ -181,7 +181,7 @@ export default function SecuritySettings() {
             <button
               onClick={handleSetup}
               disabled={actionLoading}
-              className="px-6 py-2.5 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-500 to-amber-500 hover:from-teal-600 hover:to-amber-600 transition-all shadow-md disabled:opacity-50 flex items-center gap-2"
+              className="px-6 py-2.5 rounded-xl font-semibold text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md disabled:opacity-50 flex items-center gap-2"
             >
               {actionLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <QrCode className="w-4 h-4" />}
               Set Up 2FA
@@ -233,7 +233,7 @@ export default function SecuritySettings() {
               <button
                 type="submit"
                 disabled={actionLoading || code.length !== 6}
-                className="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 transition-all shadow-md disabled:opacity-50"
+                className="px-6 py-3 rounded-xl font-bold text-white bg-green-600 hover:bg-green-700 transition-all shadow-md disabled:opacity-50"
               >
                 {actionLoading ? "Verifying..." : "Verify"}
               </button>
@@ -259,7 +259,7 @@ export default function SecuritySettings() {
               <button
                 type="submit"
                 disabled={actionLoading || disableCode.length !== 6}
-                className="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600 transition-all shadow-md disabled:opacity-50"
+                className="px-6 py-3 rounded-xl font-bold text-white bg-red-600 hover:bg-red-700 transition-all shadow-md disabled:opacity-50"
               >
                 {actionLoading ? "Disabling..." : "Disable 2FA"}
               </button>

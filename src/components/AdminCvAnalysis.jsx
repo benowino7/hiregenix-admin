@@ -234,7 +234,7 @@ const AdminCvAnalysis = () => {
                 <button
                     onClick={handleAnalyze}
                     disabled={analyzing || cvFiles.length === 0 || selectedJobIds.length === 0}
-                    className="mt-6 w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="mt-6 w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {analyzing ? (
                         <>

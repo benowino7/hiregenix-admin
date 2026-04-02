@@ -85,8 +85,7 @@ export default function DashboardOverview() {
           label: "Total Users",
           value: stats.users,
           icon: Users,
-          bgGradient:
-            "from-blue-50 to-blue-100/50 dark:from-blue-500/10 dark:to-blue-600/10",
+          bgColor: "bg-blue-50 dark:bg-blue-500/10",
           iconBg: "bg-blue-100 dark:bg-blue-500/20",
           iconColor: "text-blue-600 dark:text-blue-400",
         },
@@ -94,8 +93,7 @@ export default function DashboardOverview() {
           label: "Job Seekers",
           value: stats.jobSeekers,
           icon: Briefcase,
-          bgGradient:
-            "from-green-50 to-green-100/50 dark:from-green-500/10 dark:to-green-600/10",
+          bgColor: "bg-green-50 dark:bg-green-500/10",
           iconBg: "bg-green-100 dark:bg-green-500/20",
           iconColor: "text-green-600 dark:text-green-400",
         },
@@ -103,8 +101,7 @@ export default function DashboardOverview() {
           label: "Recruiters",
           value: stats.recruiters,
           icon: UserCheck,
-          bgGradient:
-            "from-purple-50 to-purple-100/50 dark:from-purple-500/10 dark:to-purple-600/10",
+          bgColor: "bg-purple-50 dark:bg-purple-500/10",
           iconBg: "bg-purple-100 dark:bg-purple-500/20",
           iconColor: "text-purple-600 dark:text-purple-400",
         },
@@ -112,8 +109,7 @@ export default function DashboardOverview() {
           label: "Pending Approvals",
           value: stats.pendingApprovals,
           icon: AlertCircle,
-          bgGradient:
-            "from-amber-50 to-amber-100/50 dark:from-amber-500/10 dark:to-amber-600/10",
+          bgColor: "bg-amber-50 dark:bg-amber-500/10",
           iconBg: "bg-amber-100 dark:bg-amber-500/20",
           iconColor: "text-amber-600 dark:text-amber-400",
         },
@@ -184,7 +180,7 @@ export default function DashboardOverview() {
         {statCards.map((card, i) => (
           <div
             key={i}
-            className={`relative bg-gradient-to-br ${card.bgGradient} rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all group overflow-hidden`}
+            className={`relative ${card.bgColor} rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all group overflow-hidden`}
           >
             <div className="relative">
               <div className="flex items-start justify-between mb-4">
@@ -211,7 +207,7 @@ export default function DashboardOverview() {
               label: "Industries",
               value: stats.industries,
               icon: Building2,
-              bgGradient: "from-indigo-50 to-indigo-100/50 dark:from-indigo-500/10 dark:to-indigo-600/10",
+              bgColor: "bg-indigo-50 dark:bg-indigo-500/10",
               iconBg: "bg-indigo-100 dark:bg-indigo-500/20",
               iconColor: "text-indigo-600 dark:text-indigo-400",
             },
@@ -219,7 +215,7 @@ export default function DashboardOverview() {
               label: "Skills",
               value: stats.skills,
               icon: Tag,
-              bgGradient: "from-cyan-50 to-cyan-100/50 dark:from-cyan-500/10 dark:to-cyan-600/10",
+              bgColor: "bg-cyan-50 dark:bg-cyan-500/10",
               iconBg: "bg-cyan-100 dark:bg-cyan-500/20",
               iconColor: "text-cyan-600 dark:text-cyan-400",
             },
@@ -228,7 +224,7 @@ export default function DashboardOverview() {
               value: stats.jobs,
               subtitle: `${stats.publishedJobs?.toLocaleString() || 0} published · ${stats.feedJobs?.toLocaleString() || 0} from feed`,
               icon: Briefcase,
-              bgGradient: "from-teal-50 to-teal-100/50 dark:from-teal-500/10 dark:to-teal-600/10",
+              bgColor: "bg-teal-50 dark:bg-teal-500/10",
               iconBg: "bg-teal-100 dark:bg-teal-500/20",
               iconColor: "text-teal-600 dark:text-teal-400",
             },
@@ -236,14 +232,14 @@ export default function DashboardOverview() {
               label: "Skill Mappings",
               value: stats.mappings,
               icon: LinkIcon,
-              bgGradient: "from-rose-50 to-rose-100/50 dark:from-rose-500/10 dark:to-rose-600/10",
+              bgColor: "bg-rose-50 dark:bg-rose-500/10",
               iconBg: "bg-rose-100 dark:bg-rose-500/20",
               iconColor: "text-rose-600 dark:text-rose-400",
             },
           ].map((card, i) => (
             <div
               key={i}
-              className={`relative bg-gradient-to-br ${card.bgGradient} rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all group overflow-hidden`}
+              className={`relative ${card.bgColor} rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all group overflow-hidden`}
             >
               <div className="relative">
                 <div className="flex items-start justify-between mb-4">
@@ -293,7 +289,7 @@ export default function DashboardOverview() {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-5 border border-green-100 dark:border-green-800/40">
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-5 border border-green-100 dark:border-green-800/40">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-green-100 dark:bg-green-800/40 rounded-lg">
                   <TrendingUp size={20} className="text-green-600 dark:text-green-400" />
@@ -304,7 +300,7 @@ export default function DashboardOverview() {
                 ${((paymentStats[paymentPeriod]?.amount || 0) / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-5 border border-blue-100 dark:border-blue-800/40">
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-5 border border-blue-100 dark:border-blue-800/40">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-blue-100 dark:bg-blue-800/40 rounded-lg">
                   <CreditCard size={20} className="text-blue-600 dark:text-blue-400" />
@@ -315,7 +311,7 @@ export default function DashboardOverview() {
                 {(paymentStats[paymentPeriod]?.count || 0).toLocaleString()}
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 rounded-xl p-5 border border-purple-100 dark:border-purple-800/40">
+            <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-5 border border-purple-100 dark:border-purple-800/40">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-purple-100 dark:bg-purple-800/40 rounded-lg">
                   <Calendar size={20} className="text-purple-600 dark:text-purple-400" />
@@ -454,7 +450,7 @@ export default function DashboardOverview() {
                 key={user.id}
                 className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
                   {user.firstName?.[0] || "?"}
                   {user.lastName?.[0] || "?"}
                 </div>

@@ -558,7 +558,7 @@ function Users() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 {/* Avatar + Info */}
                 <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-semibold text-sm">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-semibold text-sm">
                     {user.firstName?.[0]}{user.lastName?.[0]}
                   </div>
                   <div className="min-w-0 flex-1">
