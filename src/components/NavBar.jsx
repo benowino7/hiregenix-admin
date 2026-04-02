@@ -5,6 +5,8 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../themes/ThemeContext';
+import logo from '../assets/logo.png';
+import logodark from '../assets/logodark.png';
 
 const NavBar = ({ toggleSidebar }) => {
   const [userData, setUserData] = useState(JSON.parse(sessionStorage.getItem('user')) || {});
@@ -59,10 +61,8 @@ const NavBar = ({ toggleSidebar }) => {
             <button onClick={toggleSidebar} className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
               <ChevronRight size={24} className="text-gray-600 dark:text-gray-300" />
             </button>
-            <Link to="/" className="ml-2 text-2xl font-bold">
-              <span className="text-teal-500">Top</span>
-              <span className="text-gray-900 dark:text-white">Dubai</span>
-              <span className="text-teal-500">Jobs</span>
+            <Link to="/" className="ml-2 flex items-center">
+              <img src={isDark ? logodark : logo} alt="HireGeniX" className="h-8" />
             </Link>
           </div>
 
