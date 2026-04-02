@@ -1,6 +1,8 @@
 // src/pages/Login.jsx
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import logodark from '../assets/logodark.png';
+import { useTheme } from '../themes/ThemeContext';
 import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../BaseUrl';
@@ -9,6 +11,7 @@ import ErrorMessage from '../utilities/ErrorMessage';
 import officeImg from '../assets/office.jpg';
 
 const Login = () => {
+  const { isDark } = useTheme();
   const navigation = useNavigate('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -105,7 +108,7 @@ const Login = () => {
           {/* Brand */}
           <div className="mb-10 text-center md:text-left">
             <div className="inline-block">
-              <img src={logo} alt="HireGeniX" className="h-10 md:h-12" />
+              <img src={isDark ? logodark : logo} alt="HireGeniX" className="h-10 md:h-12" />
             </div>
             <p className="mt-3 text-gray-600 dark:text-gray-400">
               {twoFactorStep
