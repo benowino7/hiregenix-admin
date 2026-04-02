@@ -1,0 +1,38 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.custom-toast-success {
+  background-color: #006738 !important;
+  color: white !important;
+  min-height: 80px;
+}
+
+.custom-toast-error {
+  background-color: #ff4444 !important;
+  color: white !important;
+  min-height: 80px;
+}
+.custom-toast-icon {
+  color: white;
+}
+.Toastify__progress-bar--success {
+  background-color: #fff !important;
+}
+
+.Toastify__progress-bar--error {
+  background-color: white !important;
+}
