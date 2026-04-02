@@ -1,5 +1,6 @@
 // src/pages/Login.jsx
 import React, { useState } from 'react';
+import logo from '../assets/logo.png';
 import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../BaseUrl';
@@ -104,12 +105,7 @@ const Login = () => {
           {/* Brand */}
           <div className="mb-10 text-center md:text-left">
             <div className="inline-block">
-              <span className="text-4xl md:text-5xl font-black">
-                <span className="text-teal-500">Top</span>
-                <span className="text-gray-900 dark:text-white">Dubai</span>
-                <span className="text-teal-500">Jobs</span>
-              </span>
-              <span className="text-xl text-gray-500 dark:text-gray-400">.ae</span>
+              <img src={logo} alt="HireGeniX" className="h-10 md:h-12" />
             </div>
             <p className="mt-3 text-gray-600 dark:text-gray-400">
               {twoFactorStep
