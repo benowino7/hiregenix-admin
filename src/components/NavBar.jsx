@@ -62,7 +62,7 @@ const NavBar = ({ toggleSidebar }) => {
               <ChevronRight size={24} className="text-gray-600 dark:text-gray-300" />
             </button>
             <Link to="/" className="ml-2 flex items-center">
-              <img src={isDark ? logodark : logo} alt="HireGeniX" className="h-8" />
+              <img src={isDark ? logodark : logo} alt="HireGeniX" className="w-[140px] sm:w-[160px] h-auto" />
             </Link>
           </div>
 
