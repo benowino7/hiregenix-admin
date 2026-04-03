@@ -86,24 +86,21 @@ function PackageManagement() {
   // Separate job seeker & recruiter plans, exclude Free Trial
   const jobSeekerPlans = plans.filter(p => p.userType === "JOB_SEEKER" && p.name !== "Free Trial" && !p.name.startsWith("Diamond"));
   // Recruiter packages = Diamond plans (match recruiter site pricing)
-  const recruiterPlans = plans.filter(p => p.userType === "RECRUITER" && p.name.startsWith("Diamond"));
+  const recruiterPlans = plans.filter(p => p.userType === "RECRUITER" && p.name !== "Free Trial" && !p.name.includes("(Legacy)"));
 
   const tierColors = {
     Silver: { bg: "bg-gray-50 dark:bg-gray-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
     Gold: { bg: "bg-amber-50 dark:bg-amber-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
     Platinum: { bg: "bg-violet-50 dark:bg-violet-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
-    Diamond: { bg: "bg-gray-50 dark:bg-gray-800/60", border: "border-gray-200 dark:border-gray-700", badge: "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300", accent: "text-gray-600 dark:text-gray-400" },
-    "Diamond Compact": { bg: "bg-amber-50 dark:bg-amber-900/20", border: "border-amber-200 dark:border-amber-800/40", badge: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400", accent: "text-amber-600 dark:text-amber-400" },
-    "Diamond Compact Plus": { bg: "bg-violet-50 dark:bg-violet-900/20", border: "border-violet-200 dark:border-violet-800/40", badge: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400", accent: "text-violet-600 dark:text-violet-400" },
-    "Diamond Unlimited": { bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "border-cyan-200 dark:border-cyan-800/40", badge: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400", accent: "text-cyan-600 dark:text-cyan-400" },
+    Diamond: { bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "border-cyan-200 dark:border-cyan-800/40", badge: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400", accent: "text-cyan-600 dark:text-cyan-400" },
   };
   const defaultColor = tierColors.Silver;
 
   const recruiterSubtitles = {
-    Diamond: "Single Job Posting",
-    "Diamond Compact": "3 Job Postings",
-    "Diamond Compact Plus": "5 Job Postings",
-    "Diamond Unlimited": "Unlimited Job Postings",
+    Silver: "Single Job Posting",
+    Gold: "3 Job Postings",
+    Platinum: "5 Job Postings",
+    Diamond: "Unlimited Job Postings",
   };
 
   const renderPlanCard = (plan) => {
