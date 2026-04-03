@@ -108,7 +108,8 @@ function PackageManagement() {
 
   const renderPlanCard = (plan) => {
     const isEditing = canEdit && editingId === plan.id;
-    const colors = tierColors[plan.name] || defaultColor;
+    const tierName = Object.keys(tierColors).find(t => plan.name?.startsWith(t)) || null;
+    const colors = tierColors[tierName] || defaultColor;
 
     return (
       <div key={plan.id} className={`relative ${colors.bg} rounded-xl border ${colors.border} p-5 transition-all hover:shadow-md`}>
@@ -178,7 +179,7 @@ function PackageManagement() {
                 )}
                 <p className={`text-2xl font-bold ${colors.accent}`}>
                   ${(plan.amount / 100).toLocaleString('en-US', { minimumFractionDigits: 2 })}
-                  <span className="text-sm font-normal text-gray-500 dark:text-gray-400">/{plan.interval === 'YEAR' ? 'yr' : 'mo'}</span>
+                  <span className="text-sm font-normal text-gray-500 dark:text-gray-400">/{plan.interval === 'YEAR' ? 'yr' : plan.interval === 'HALF_YEAR' ? '6mo' : plan.interval === 'QUARTER' ? '3mo' : 'mo'}</span>
                 </p>
               </div>
               {canEdit && (
@@ -588,7 +589,7 @@ function UserPlanManagement() {
                         {isCurrent && <span className="text-xs bg-teal-500 text-white px-2 py-0.5 rounded-full">Current</span>}
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        {formatAmount(plan.amount, plan.currency)} / {plan.interval.toLowerCase()}
+                        {formatAmount(plan.amount, plan.currency)} / {plan.interval === 'YEAR' ? 'year' : plan.interval === 'HALF_YEAR' ? '6 months' : plan.interval === 'QUARTER' ? '3 months' : 'month'}
                       </p>
                     </button>
                   );
