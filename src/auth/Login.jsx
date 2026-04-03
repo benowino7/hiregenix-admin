@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import logodark from '../assets/logodark.png';
 import { useTheme } from '../themes/ThemeContext';
-import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck, Moon, Sun } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../BaseUrl';
 import successMessage from '../utilities/successMessage';
@@ -11,7 +11,7 @@ import ErrorMessage from '../utilities/ErrorMessage';
 import officeImg from '../assets/office.jpg';
 
 const Login = () => {
-  const { isDark } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
   const navigation = useNavigate('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -100,7 +100,14 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4 transition-colors duration-300 relative">
+        {/* Theme Toggle */}
+        <button
+          onClick={toggleTheme}
+          className="absolute top-6 right-6 p-2 rounded-lg text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
       <div className="w-full max-w-6xl grid md:grid-cols-2 overflow-hidden rounded-2xl shadow-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
 
         {/* LEFT: Login Form */}
