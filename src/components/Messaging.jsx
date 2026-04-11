@@ -27,7 +27,7 @@ const authHeaders = () => ({
   "Content-Type": "application/json",
 });
 
-const SOCKET_URL = import.meta.env.VITE_BASE_URL?.replace("/api/v1", "") || "https://api.hiregenix.ai";
+const SOCKET_URL = import.meta.env.VITE_BASE_URL?.replace("/api/v1", "") || "https://api.ratchetup.ai";
 
 export default function Messaging() {
   const [conversations, setConversations] = useState([]);

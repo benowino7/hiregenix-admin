@@ -3,7 +3,7 @@ import { Search, ArrowUpDown, CheckCircle, AlertCircle, Loader2, Crown, Clock, E
 import { BASE_URL } from '../BaseUrl';
 import { toast } from 'react-toastify';
 
-const SUPER_USER_EMAIL = "admin@hiregenix.ai";
+const SUPER_USER_EMAIL = "admin@ratchetup.ai";
 
 const getToken = () => {
   try { return JSON.parse(sessionStorage.getItem("accessToken")); }

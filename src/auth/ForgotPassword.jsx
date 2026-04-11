@@ -132,7 +132,7 @@ export default function ForgotPassword() {
               <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 flex items-start gap-2">
                 <Shield className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-xs text-blue-700 dark:text-blue-400">
-                  Open Google Authenticator on your phone and enter the 6-digit code for HireGeniX.
+                  Open Google Authenticator on your phone and enter the 6-digit code for RatchetUp.
                 </p>
               </div>
 

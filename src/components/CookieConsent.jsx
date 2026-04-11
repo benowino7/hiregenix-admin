@@ -56,7 +56,7 @@ function CookiePolicyContent() {
     <div className="space-y-6 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
       <div>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          Cookie Policy - HireGeniX
+          Cookie Policy - RatchetUp
         </h3>
         <p className="text-xs text-gray-500 dark:text-gray-400">
           Last Updated: March 2026
@@ -173,12 +173,12 @@ function CookiePolicyContent() {
           If you have questions about our use of cookies, please contact us at:
         </p>
         <address className="not-italic mt-1 ml-2 space-y-0.5">
-          <p>HireGeniX</p>
+          <p>RatchetUp</p>
           <p>Suite 502, 55 Commerce Valley</p>
           <p>Markham, ON, L3T 7V9</p>
           <p>Customer Care: 647-788-8715</p>
           <p>Support: 647-930-7516</p>
-          <p>Email: support@hiregenix.ai</p>
+          <p>Email: support@ratchetup.ai</p>
         </address>
       </div>
     </div>

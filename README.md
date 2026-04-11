@@ -1,6 +1,6 @@
-# HireGeniX - Admin Portal
+# RatchetUp - Admin Portal
 
-React-based admin frontend for the HireGeniX platform. Provides administrators with tools to manage users, approve/reject recruiters, manage industries and skills, and monitor platform activity.
+React-based admin frontend for the RatchetUp platform. Provides administrators with tools to manage users, approve/reject recruiters, manage industries and skills, and monitor platform activity.
 
 ## Tech Stack
 
@@ -22,8 +22,8 @@ React-based admin frontend for the HireGeniX platform. Provides administrators w
 
 1. **Clone and install**
    ```bash
-   git clone https://github.com/Ochieng2000/adminhiregenix.git
-   cd adminhiregenix
+   git clone https://github.com/Ochieng2000/adminratchetup.git
+   cd adminratchetup
    npm install
    ```
 
@@ -325,8 +325,8 @@ The **Sidebar** provides quick access to:
 
 ### Docker
 ```bash
-docker build -t adminhiregenix .
-docker run -p 80:80 adminhiregenix
+docker build -t adminratchetup .
+docker run -p 80:80 adminratchetup
 ```
 
 ### Vercel

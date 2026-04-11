@@ -1,13 +1,13 @@
 services:
-  hiregenix_admin:
+  ratchetup_admin:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: hiregenix_admin
+    container_name: ratchetup_admin
     environment:
-      - VIRTUAL_HOST=dashboard.hiregenix.ai
+      - VIRTUAL_HOST=admin.ratchetup.ai
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=dashboard.hiregenix.ai
+      - LETSENCRYPT_HOST=admin.ratchetup.ai
       - LETSENCRYPT_EMAIL=isaac.ochieng2000@gmail.com
     expose:
       - "80"

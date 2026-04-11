@@ -115,7 +115,7 @@ const Login = () => {
           {/* Brand */}
           <div className="mb-10 text-center md:text-left">
             <div className="inline-block">
-              <img src={isDark ? logodark : logo} alt="HireGeniX" className="w-[180px] sm:w-[200px] h-auto" />
+              <img src={isDark ? logodark : logo} alt="RatchetUp" className="w-[180px] sm:w-[200px] h-auto" />
             </div>
             <p className="mt-3 text-gray-600 dark:text-gray-400">
               {twoFactorStep
